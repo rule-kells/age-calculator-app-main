@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+@each $unit-name, $unit-value in $font-sizes {
+  .fs-#{$unit-name} {
+    font-size: $unit-value;
+  }
+}
+
+.fw-400 {
+  font-weight: $fw-400;
+}
+
+.fw-700 {
+  font-weight: $fw-700;
+}

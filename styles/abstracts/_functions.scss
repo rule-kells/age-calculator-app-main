@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "colors" as *;
+@use "typography" as *;
+@use "units" as *;
+
+@function clr($color, $shade) {
+  @if map.has-key($clr-palette, $color, $shade) {
+    @return map.get($clr-palette, $color, $shade);
+  } @else {
+    @error '$colors does not have that color!';
+  }
+}
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  } @else {
+    @error '$font-sizes does not have that size!';
+  }
+}
+
+@function unit($unit) {
+  @if map.has-key($units, $unit) {
+    @return map.get($units, $unit);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
+}

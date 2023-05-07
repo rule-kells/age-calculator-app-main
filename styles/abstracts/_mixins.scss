@@ -1,0 +1,25 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+// @use "typography" as *;
+// @use "" as *;
+
+@mixin mq($unit) {
+  @if map.has-key($breakpoints, $unit) {
+    $breakpoint: map-get($breakpoints, $unit);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($unit) == number {
+    @if math.is-unitless($unit) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $unit) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$unit} is not in the $breakpoints map';
+  }
+}

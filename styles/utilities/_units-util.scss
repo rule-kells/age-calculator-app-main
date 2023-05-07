@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+@each $unit-name, $unit-value in $units {
+  .margin {
+    &-#{$unit-name} {
+      margin: $unit-value;
+    }
+    &-block-start-#{$unit-name} {
+      margin-block-start: $unit-value;
+    }
+    &-block-end-#{$unit-name} {
+      margin-block-end: $unit-value;
+    }
+    &-block-#{$unit-name} {
+      margin-block: $unit-value;
+    }
+    &-inline-start-#{$unit-name} {
+      margin-inline-start: $unit-value;
+    }
+    &-inline-end-#{$unit-name} {
+      margin-inline-end: $unit-value;
+    }
+    &-inline-#{$unit-name} {
+      margin-inline: $unit-value;
+    }
+  }
+  .padding {
+    &-#{$unit-name} {
+      padding: $unit-value;
+    }
+    &-block-start-#{$unit-name} {
+      padding-block-start: $unit-value;
+    }
+    &-block-end-#{$unit-name} {
+      padding-block-end: $unit-value;
+    }
+    &-block-#{$unit-name} {
+      padding-block: $unit-value;
+    }
+    &-inline-start-#{$unit-name} {
+      padding-inline-start: $unit-value;
+    }
+    &-inline-end-#{$unit-name} {
+      padding-inline-end: $unit-value;
+    }
+    &-inline-#{$unit-name} {
+      padding-inline: $unit-value;
+    }
+  }
+}

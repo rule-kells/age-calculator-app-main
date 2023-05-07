@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+// $clr-bg: #333;
+// $clr-fg: #f3f3f3;
+
+body {
+  font-size: fs(s);
+  font-weight: $fw-400;
+}

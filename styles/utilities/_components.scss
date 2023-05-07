@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.container {
+  width: clamp(20ch, 90%, unit(730));
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--spacer, 1rem);
+}
