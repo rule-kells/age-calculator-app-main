@@ -1,4 +1,4 @@
-$ff-primary: "Open Sans", sans-serif;
+$ff-primary: "Poppins", sans-serif;
 //$ff-secondary
 
 // $font-sizes: (
@@ -17,5 +17,8 @@ $font-sizes: (
   xs: 1rem,
 );
 
-$fw-400: 400;
-$fw-700: 700;
+$fw: (
+  400: 400,
+  700: 700,
+  800: 800,
+);

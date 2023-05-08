@@ -1,3 +1,25 @@
-// .btn {
+@use "../abstracts/" as *;
 
-// }
+.btn {
+  position: absolute;
+
+  inset: auto 0 0;
+  transform: translate(0, 50%);
+
+  width: 100%;
+  width: unit(64);
+  height: unit(64);
+  background-color: clr(primary, 500);
+  border-radius: 50%;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  @include mq(tablet) {
+    inset: auto 56px 0 auto;
+    transform: translateY(50%);
+  }
+}

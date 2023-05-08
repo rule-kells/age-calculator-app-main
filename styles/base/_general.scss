@@ -4,11 +4,24 @@
 // $clr-fg: #f3f3f3;
 
 body {
+  background-color: clr(neutral, 200);
+  color: clr(neutral, 600);
   font-size: fs(s);
-  font-weight: $fw-400;
+  font-weight: fw(400);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
 }
 
 .attribution {
+  inset: auto auto 0;
+  margin-inline: auto;
+  position: absolute;
   font-size: 11px;
   text-align: center;
 }

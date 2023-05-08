@@ -7,9 +7,28 @@
 }
 
 .fw-400 {
-  font-weight: $fw-400;
+  font-weight: fw(400);
+}
+
+.fw-400-italic {
+  font-weight: fw(400);
+  font-style: italic;
 }
 
 .fw-700 {
-  font-weight: $fw-700;
+  font-weight: fw(700);
+}
+
+.fw-700-italic {
+  font-weight: fw(700);
+  font-style: italic;
+}
+
+.fw-800 {
+  font-weight: fw(800);
+}
+
+.fw-800-italic {
+  font-weight: fw(800);
+  font-style: italic;
 }

@@ -1,20 +1,21 @@
 $clr-palette: (
   primary: (
-    100: lightblue,
-    500: blue,
-    800: darkblue,
+    400: hsl(0, 100%, 67%),
+    500: hsl(259, 100%, 65%),
+    // 800: darkblue,
   ),
   neutral: (
-    50: white,
-    500: gray,
-    900: black,
+    200: #f0f0f0,
+    300: #dbdbdb,
+    600: #716f6f,
+    900: #141414,
   ),
   // clr-black: (
   //   "black": hsl(0, 0%, 0%),
   // ),
   // clr-white: (
   //   "white": hsl(0, 0%, 100%),
-  // ),,,,,
+  // ),,,,,,,,,,,,,,,
 );
 
 //this is largle based on Google's Material Theme

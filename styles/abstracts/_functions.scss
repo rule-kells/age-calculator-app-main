@@ -19,6 +19,14 @@
   }
 }
 
+@function fw($value) {
+  @if map.has-key($fw, $value) {
+    @return map.get($fw, $value);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
+}
+
 @function unit($unit) {
   @if map.has-key($units, $unit) {
     @return map.get($units, $unit);
