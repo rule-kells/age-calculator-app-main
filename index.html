@@ -12,27 +12,49 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    Day DD Month MM Year YYYY -- years -- months -- days
+    <main>
+      <div class="card">
+        <section class="card__top">
+          <form action="#">
+            <div class="">
+              <h1>Day</h1>
+              <label for="day">DD</label>
+              <input type="number" id="day" name="day" required />
+            </div>
+            <div class="">
+              <h1>Month</h1>
+              <label for="">MM</label>
+              <input type="number" id="month" name="month" required />
+            </div>
+            <div class="">
+              <h1>Year</h1>
+              <label for="">YYYY </label>
+              <input type="number" id="year" name="year" required />
+            </div>
+            <button type="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </form>
+        </section>
+        <section class="card__bottom">
+          <h2><span>--</span> years</h2>
+          <h2><span>--</span> months</h2>
+          <h2><span>--</span> days</h2>
+        </section>
+      </div>
+    </main>
 
-    <img src="./assets/images/icon-arrow.svg" alt="" />
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Kellen Ruyle</a>.
-    </div>
+    <footer class="attribution">
+      <p>
+        <small>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Kellen Ruyle</a>.
+        </small>
+      </p>
+    </footer>
   </body>
 </html>
