@@ -53,10 +53,12 @@
             <div class="form__data form__data--year">
               <label for="year">Year</label>
               <input
-                type="number"
+                type="year"
                 id="year"
                 name="year"
                 placeholder="YYYY"
+                pattern="\d{4,4}"
+                maxlength="4"
                 required
               />
             </div>
