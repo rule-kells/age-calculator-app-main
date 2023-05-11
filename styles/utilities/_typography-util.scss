@@ -1,9 +1,23 @@
 @use "../abstracts" as *;
 
-@each $unit-name, $unit-value in $font-sizes {
-  .fs-#{$unit-name} {
-    font-size: $unit-value;
-  }
+// @each $unit-name, $unit-value in $font-sizes {
+//   .fs-heading-#{$unit-name} {
+//     font-size: $unit-value;
+//   }
+// }
+
+.fs-heading-xl {
+  font-size: var(--fs-heading-xl);
+  line-height: 1.1;
+  letter-spacing: -2%;
+}
+
+.fs-heading-s {
+  font-size: var(--fs-heading-s);
+}
+
+.fs-heading-xs {
+  font-size: var(--fs-heading-xs);
 }
 
 .fw-400 {

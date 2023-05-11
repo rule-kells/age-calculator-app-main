@@ -1,21 +1,31 @@
+@use "../abstracts/mixins" as *;
+
+:root {
+  --fs-heading-xl: 3.5rem;
+  --fs-heading-s: 1.25rem;
+  --fs-heading-xs: 12px;
+  --fs-heading-body: 1rem;
+}
+
+@include mq(tablet) {
+  :root {
+    --fs-heading-xl: 6.5rem;
+    --fs-heading-s: 2rem;
+    --fs-heading-xs: 14px;
+    --fs-heading-body: 1.125rem;
+  }
+}
+
 $ff-primary: "Poppins", sans-serif;
 //$ff-secondary
 
 // $font-sizes: (
-//   900: 3.75rem,
-//   800: 3rem,
-//   600: 1.5rem,
-//   500: 1.3125rem,
-//   400: 1.125rem,
+//   xl: 3.75rem,
+//   l: 3rem,
+//   m: 2rem,
+//   s: 1.125rem,
+//   xs: 1rem,
 // );
-
-$font-sizes: (
-  xl: 3.75rem,
-  l: 3rem,
-  m: 2rem,
-  s: 1.125rem,
-  xs: 1rem,
-);
 
 $fw: (
   400: 400,

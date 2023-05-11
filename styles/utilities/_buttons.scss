@@ -19,7 +19,14 @@
   z-index: 2;
 
   @include mq(tablet) {
+    width: 96px;
+    height: 96px;
     inset: auto 56px 0 auto;
     transform: translateY(50%);
+  }
+
+  &:hover,
+  &active {
+    background-color: clr(neutral, 900);
   }
 }
