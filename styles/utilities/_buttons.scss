@@ -19,9 +19,9 @@
   z-index: 2;
 
   @include mq(tablet) {
-    width: 96px;
-    height: 96px;
-    inset: auto 56px 0 auto;
+    width: 6rem;
+    height: 6rem;
+    inset: auto 3.5rem 0 auto;
     transform: translateY(50%);
   }
 

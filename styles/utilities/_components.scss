@@ -6,10 +6,10 @@
 }
 
 .underline {
-  padding-bottom: 63px;
+  padding-bottom: 3.9375rem;
   border-bottom: 1px solid clr(neutral, 300);
 
   @include mq(tablet) {
-    padding-bottom: 47.5px;
+    padding-bottom: 2.97rem;
   }
 }

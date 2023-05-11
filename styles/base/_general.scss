@@ -38,7 +38,7 @@ main {
 
 .card__bottom {
   position: relative;
-  padding: 63px unit(24) unit(48) unit(24);
+  padding: 3.9375rem unit(24) unit(48) unit(24);
   @include mq(tablet) {
     padding: unit(56) unit(56) unit(56) unit(56);
   }
@@ -72,20 +72,20 @@ main {
     // }
 
     width: 100%;
-    max-width: 87px;
+    max-width: 5.4375rem;
 
     @include mq(tablet) {
-      max-width: 160px;
+      max-width: 10rem;
     }
 
     & label {
       color: clr(neutral, 900);
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 0.25rem;
       text-transform: uppercase;
 
       @include mq(tablet) {
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
       }
     }
 
@@ -106,7 +106,7 @@ main {
       }
 
       @include mq(tablet) {
-        max-width: 160px;
+        max-width: 10rem;
         padding: unit(12) unit(24) unit(12) unit(24);
       }
 
@@ -146,12 +146,14 @@ main {
 }
 
 .attribution {
+  color: inherit;
   inset: auto auto 0;
   margin-inline: auto;
   position: absolute;
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  font-weight: fw(800);
+  color: clr(primary, 500);
 }
