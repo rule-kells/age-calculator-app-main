@@ -5,10 +5,6 @@ const inputs = document.querySelectorAll("input");
 // form
 let form = document.getElementById("id-form");
 
-let day = document.getElementById("day");
-let month = document.getElementById("month");
-let year = document.getElementById("year");
-
 // outputs
 const dayOutput = document.getElementById("data-output-dd");
 const monthOutput = document.getElementById("data-output-mm");
@@ -19,6 +15,10 @@ let validator = true;
 reset();
 
 function reset() {
+  let day = document.getElementById("day");
+  let month = document.getElementById("month");
+  let year = document.getElementById("year");
+
   day.value = "";
   month.value = "";
   year.value = "";
