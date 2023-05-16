@@ -1,11 +1,16 @@
-let day = document.getElementById("day");
-let month = document.getElementById("month");
-let year = document.getElementById("year");
+// variables
+// inputs
+
+const inputs = document.querySelectorAll("input");
+// form
 let form = document.getElementById("id-form");
+
+// outputs
 const dayOutput = document.getElementById("data-output-dd");
 const monthOutput = document.getElementById("data-output-mm");
 const yearOutput = document.getElementById("data-output-yy");
-// const btn = document.querySelector(".btn");
+
+let validator = true;
 
 reset();
 
@@ -17,41 +22,60 @@ function reset() {
 
 form.addEventListener("submit", calculateAge);
 
-function validate() {
-  const inputs = document.querySelectorAll("input");
-  let validator = true;
+function validated(input) {}
 
-  let currentYear = new Date();
-  currentYear.getFullYear
-  console.log(currentYear);
+function validate() {
+  validator = true;
+
+  // let regex = /\d{4,4}/;
 
   inputs.forEach((input) => {
     const errorMsg = input.nextElementSibling;
+    let day = document.getElementById("day");
+    let month = document.getElementById("month");
+    let year = document.getElementById("year");
 
-    // console.log(errorMsg);
-    //probably needs to be siblingelement
-    console.log(input);
     if (!input.value) {
       input.classList.add("error-outline");
       errorMsg.classList.add("invalid-msg");
       validator = false;
     } else if (input === month && input.value > 12) {
-      // monthInp.style.borderColor = "red";
-      // monthInp.parentElement.querySelector("small").innerText = "must be a valid month.";
       month.classList.add("error-outline");
       errorMsg.classList.add("invalid-msg");
       validator = false;
+    } else {
+      input.classList.remove("error-outline");
+      errorMsg.classList.remove("invalid-msg");
+      input.classList.add("valid-outline");
+      validator = validator && true;
+    }
+
+    if (!input.value) {
+      input.classList.add("error-outline");
+      errorMsg.classList.add("invalid-msg");
+      validator = false;
     } else if (input === day && input.value > 31) {
-      // dayInp.style.borderColor = "red";
-      // dayInp.parentElement.querySelector("small").innerText = "must be a valid day.";
       day.classList.add("error-outline");
       errorMsg.classList.add("invalid-msg");
       validator = false;
-    // } else if (input === year && input.value > 2300) {
-    //   console.log(year)
-    //   year.classList.add("error-outline");
-    //   errorMsg.classList.add("invalid-msg");
-    //   validator = false;
+    } else {
+      input.classList.remove("error-outline");
+      errorMsg.classList.remove("invalid-msg");
+      input.classList.add("valid-outline");
+      validator = validator && true;
+    }
+
+    if (!input.value) {
+      input.classList.add("error-outline");
+      errorMsg.classList.add("invalid-msg");
+      validator = false;
+    } else if (
+      (input === year && input.value > new Date().getFullYear()) ||
+      year.value < 1000
+    ) {
+      year.classList.add("error-outline");
+      errorMsg.classList.add("invalid-msg");
+      validator = false;
     } else {
       input.classList.remove("error-outline");
       errorMsg.classList.remove("invalid-msg");
@@ -63,15 +87,11 @@ function validate() {
 }
 
 function calculateAge(e) {
-  // var birthDate = new Date(date.value);
   e.preventDefault();
   let currentDate = new Date();
   let getUserDay = currentDate.getDate();
-  console.log(getUserDay);
   let getUserMonth = currentDate.getMonth() + 1;
-  console.log(getUserMonth);
   let getUserYear = currentDate.getFullYear();
-  console.log(getUserYear);
 
   day = document.getElementById("day").value;
   month = document.getElementById("month").value;
@@ -82,6 +102,7 @@ function calculateAge(e) {
   let calcMonths;
   let calcYears;
 
+  // calculate year
   if (validate()) {
     if (
       getUserMonth > month ||
@@ -116,19 +137,3 @@ function calculateAge(e) {
     yearOutput.innerHTML = calcYears;
   }
 }
-
-document.addEventListener("keypress", (e) => {
-  if (e == 13) {
-    form.click();
-  }
-});
-
-// run calculate on enter key
-// document.addEventListener('keypress', (e) => {
-//   if (e.keyCode == 13) {
-//     calculate.click();
-//   }
-// });
-// onload focus on date input
-
-// make month positive

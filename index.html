@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer type="module" src="/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | Age calculator app</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="/styles/main.scss" />
+      href="./assets/images/favicon-32x32.png">
+    
+      <link rel="stylesheet" href="/styles/main.scss">
   </head>
   <body>
     <main>
       <div class="card container">
-        <section class="card__top">
+        <div class="card__top">
           <form id="id-form" class="form underline">
             <div class="form__data form__data--day">
               <label class="fs-heading-xs fw-700" for="day">Day</label>
@@ -33,24 +31,21 @@
                 name="day"
                 min="1"
                 max="31"
-                placeholder="DD"
-              />
+                placeholder="DD">
               <p class="fs-heading-xs fw-400-italic">
                 <small>Must be a valid day.</small>
               </p>
             </div>
             <div class="form__data form__data--month">
-              <h1></h1>
               <label class="fs-heading-xs fw-700" for="month">Month</label>
               <input
                 class="fs-heading-s fw-700"
                 type="number"
                 id="month"
+                name="month"
                 min="1"
                 max="12"
-                name="month"
-                placeholder="MM"
-              />
+                placeholder="MM">
               <p class="fs-heading-xs fw-400-italic">
                 <small>Must be a valid month.</small>
               </p>
@@ -59,22 +54,20 @@
               <label class="fs-heading-xs fw-700" for="year">Year</label>
               <input
                 class="fs-heading-s fw-700"
-                type="year"
+                type="number"
                 id="year"
                 name="year"
-                placeholder="YYYY"
-                pattern="\d{4,4}"
                 maxlength="4"
-              />
+                placeholder="YYYY">
               <p class="fs-heading-xs fw-400-italic">
                 <small>Must be a valid year.</small>
               </p>
             </div>
             <button class="btn" type="submit">
-              <img src="./assets/images/icon-arrow.svg" alt="" />
+              <img src="./assets/images/icon-arrow.svg" alt="">
             </button>
           </form>
-        </section>
+        </div>
         <section class="card__bottom">
           <h2 class="fs-heading-xl fw-800-italic">
             <span id="data-output-yy" class="accent">--</span> years
@@ -99,5 +92,6 @@
         </small>
       </p>
     </footer>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
