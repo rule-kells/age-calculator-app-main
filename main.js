@@ -12,8 +12,6 @@ const yearOutput = document.getElementById("data-output-yy");
 
 let validator = true;
 
-reset();
-
 function reset() {
   let day = document.getElementById("day");
   let month = document.getElementById("month");
@@ -23,6 +21,8 @@ function reset() {
   month.value = "";
   year.value = "";
 }
+
+reset();
 
 form.addEventListener("submit", calculateAge);
 
@@ -97,9 +97,9 @@ function calculateAge(e) {
   let getUserMonth = currentDate.getMonth() + 1;
   let getUserYear = currentDate.getFullYear();
 
-  day = document.getElementById("day").value;
-  month = document.getElementById("month").value;
-  year = document.getElementById("year").value;
+  let day = document.getElementById("day").value;
+  let month = document.getElementById("month").value;
+  let year = document.getElementById("year").value;
 
   // variable for user bday - current year
   let calcDays;
